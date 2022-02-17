@@ -130,8 +130,6 @@ main {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
     height: 4em;
     padding: 1em;
     margin-top: 1.5em;
@@ -227,8 +225,7 @@ input{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    color: #4C3d53;
 }
 
 
@@ -327,8 +324,7 @@ input{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    color: #4C3d53;
     margin: 0 auto;
     width: fit-content;
     margin-top: 1em;
@@ -343,8 +339,7 @@ input{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    color: #4C3d53;
     margin: 0 auto;
     width: fit-content;
     margin-top: 1.5em;
@@ -510,7 +505,7 @@ footer {
     
 
     #secciones{
-        width:60%;
+        width:100%;
         display: flex;
         margin: 0 auto;
     }
@@ -637,8 +632,7 @@ footer {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 2em;
     padding: 0;
     padding-left: 0.5em;
@@ -658,8 +652,7 @@ footer {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 2em;
     padding: 0;
     padding-left: 0.5em;
@@ -923,8 +916,7 @@ footer{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    color: #4C3d53;
     margin: 0 auto;
     width: fit-content;
     margin-top: 0.5em;

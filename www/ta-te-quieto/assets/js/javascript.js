@@ -294,14 +294,13 @@ function cambiarLocation(){
 
 function verReglas(){
   document.getElementById('botonClick').play();
-  document.getElementById('cartelReglas').style.display = "";
+  document.getElementById('cartelReglas').style.display = "block";
 }
 
 function cerrarCartel(){
   document.getElementById('botonClick').play();
-  document.getElementById('botonClick').onended = function(){
-    document.getElementById('cartelReglas').style.display = "none";
-  }
+  document.getElementById('cartelReglas').style.display = "none";
+
 }
 
 

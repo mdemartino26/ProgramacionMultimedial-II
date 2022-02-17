@@ -47,8 +47,7 @@ button{
       background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
       border-radius: 0.3em;
       border: none;
-      color: white;
-      text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+      color: #4C3d53;
       height: 4em;
      margin-left:1em;
       padding: 1em;
@@ -62,8 +61,7 @@ button{
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 4em;
    margin-left:1em;
     padding: 1em;
@@ -131,7 +129,7 @@ main h1{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
     margin-left: 0.5em;
 }
 
@@ -162,8 +160,7 @@ main h1{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    color: #4C3d53;
     margin: 0 auto;
     width: fit-content;
     margin-top: 1em;
@@ -222,7 +219,7 @@ button:active{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
 }
 
 #cartelReglas p {
@@ -241,7 +238,7 @@ button:active{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
 }
 
 
@@ -264,8 +261,7 @@ button:active{
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     margin-right: .5em;
     width: fit-content;
     margin-left: 1em;
@@ -283,8 +279,7 @@ button:active{
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     margin-right: .5em;
     width: fit-content;
     display: flex;
@@ -347,6 +342,7 @@ button:active{
             font-size: 1em;
             padding: 2em;
             height: auto;
+            width: 50vw;
         }
 
         .aparecer h3{
@@ -354,14 +350,14 @@ button:active{
         }
 
     #reglas{
-        width: 7vw;
-        height: 5vh;
+        width: 9vw;
+        height: 6vh;
         font-size: 1em;
     }
 
     #cartelReglas button{
-        width: 15vw;
-        height: 15vh;
+        width: 9vw;
+        height: 6vh;
         font-size: 1em;
     }
     
@@ -393,8 +389,7 @@ button:active{
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     margin-right: 0.4em;
     height: 2em;
     padding: 0;
@@ -423,8 +418,7 @@ button:active{
         background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
         border-radius: 0.3em;
         border: none;
-        color: white;
-        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        color: #4C3d53;
         margin-right: 1em;
         height: 2em;
         padding: 0;

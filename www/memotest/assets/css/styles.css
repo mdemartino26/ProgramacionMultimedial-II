@@ -52,8 +52,7 @@ button:active{
       background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
       border-radius: 0.3em;
       border: none;
-      color: white;
-      text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+      color: #4C3d53;
       height: 4em;
       margin-left:1em;
       padding: 1em;
@@ -71,7 +70,7 @@ button:active{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
 }
 
 
@@ -246,8 +245,7 @@ img {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 4em;
     padding: 1em;
     margin-top: 1.5em;
@@ -314,19 +312,19 @@ img {
     font-size: 2em;
     background-image:  linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: .5em;
-    color:white;
+    color:#4C3d53;
     padding:.5em;
     width:10%;
 }
 
 #jugador1 {
+    overflow-wrap: break-word;
     text-align: center;
-    background-image:  linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
 
 }
 
 #jugador2 {
-  
+    overflow-wrap: break-word;
     text-align: center;
 
 }
@@ -411,7 +409,7 @@ address {
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
 }
 
 #cartelReglas p {
@@ -430,7 +428,7 @@ address {
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
 }
 
 @media only screen and (max-width: 768px){
@@ -484,7 +482,6 @@ address {
 
     header{
         font-size: 1.5em;
-        height: 17vh;
     }
 
     #icono{
@@ -496,6 +493,7 @@ address {
         font-size:1em;
         width: auto;
         padding-right: 0.5em;
+        width: 80%;
     }
 
     .botonMenu{
@@ -505,8 +503,7 @@ address {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 2em;
     padding: 0;
     padding-left: 0.5em;
@@ -542,8 +539,7 @@ address {
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     height: 2em;
     padding: 0;
     padding-left: 0.5em;
@@ -647,6 +643,8 @@ address {
 #reglas{
     font-size: 0.5em;
     text-align: center;
+    width: 5vw;
+    line-height: 3em;
 }
 
 #cartelReglas{

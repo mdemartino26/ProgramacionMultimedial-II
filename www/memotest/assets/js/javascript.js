@@ -39,7 +39,7 @@ var puntajeMMT2 = jugador2.puntajeMMT;
 document.getElementById("nick1").innerHTML = nick1;
 document.getElementById("nick2").innerHTML = nick2;
 
-function iniciar(){
+function iniciar() {
     document.getElementById("confirmacionAtras").style.display = "none";
     document.getElementById('cartelReglas').style.display = "none";
 }
@@ -111,7 +111,7 @@ function clickTile(divId) {
             pairsFound++;
             console.log("Pares encontrados: " + pairsFound + ". Pares totales: " + totalPairs);
             playerTurn.pairs++;
-            console.log("Pares " + nick1 + ":", player1.pairs, "Pares " +nick2 + ":", player2.pairs);
+            console.log("Pares " + nick1 + ":", player1.pairs, "Pares " + nick2 + ":", player2.pairs);
             playerTurn.points += turnsInARow * 100;
             console.log("Puntos J1: ", player1.points, "Puntos J2: ", player2.points);
             $("#points_jug1").text(JSON.stringify(player1.points));
@@ -130,19 +130,19 @@ function clickTile(divId) {
                 if (player1.pairs > player2.pairs) {
                     winDiv.innerHTML = '<h2>¡Ganó ' + nick1 + '! </h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                     winDiv.className = "appear";
-                    puntajeMMT1 = puntajeMMT1 + 1; 
+                    puntajeMMT1 = puntajeMMT1 + 1;
                     jugador1.puntajeMMT = puntajeMMT1;
                     localStorage.setItem("usuario1", JSON.stringify(jugador1))
                 } else {
                     if (player1.pairs === player2.pairs) {
                         winDiv.innerHTML = '<h2>¡Empate!</h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                         winDiv.className = "appear";
-                    } else if (player2.pairs > player1.pairs){
+                    } else if (player2.pairs > player1.pairs) {
                         winDiv.innerHTML = '<h2>¡Ganó ' + nick2 + '!</h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                         winDiv.className = "appear";
-                        puntajeMMT2 = puntajeMMT2 + 1; 
-                    jugador2.puntajeMMT = puntajeMMT2;
-                    localStorage.setItem("usuario2", JSON.stringify(jugador2))
+                        puntajeMMT2 = puntajeMMT2 + 1;
+                        jugador2.puntajeMMT = puntajeMMT2;
+                        localStorage.setItem("usuario2", JSON.stringify(jugador2))
                     }
                 }
             }
@@ -277,44 +277,43 @@ function restart() {
     document.getElementById("botonClick").onended = function () {
         location.reload();
     }
-  
+
 }
 
-function confirmarSalir(){
+function confirmarSalir() {
     document.getElementById('botonClick').play();
     document.getElementById("confirmacionAtras").style.display = "";
     document.getElementById("confirmacionAtras").className = "appear";
 }
 
-function cambiarLocation(){
+function cambiarLocation() {
     document.getElementById('botonClick').play();
-    document.getElementById('botonClick').onended = function(){
-    window.location.replace('../index.html');
-    }}
+    document.getElementById('botonClick').onended = function () {
+        window.location.replace('../index.html');
+    }
+}
 
 
 var audioPagina = 1;
 
-function audio(){
-    if(audioPagina === 1){
-    document.getElementById("sonidoFondo").play();
-    audioPagina = 0;
-}
-    else{
+function audio() {
+    if (audioPagina === 1) {
+        document.getElementById("sonidoFondo").play();
+        audioPagina = 0;
+    }
+    else {
         document.getElementById("sonidoFondo").pause();
         audioPagina = 1;
     }
-   
+
 }
 
-function verReglas(){
+function verReglas() {
     document.getElementById('botonClick').play();
     document.getElementById('cartelReglas').style.display = "";
-  }
-  
-  function cerrarCartel(){
+}
+
+function cerrarCartel() {
     document.getElementById('botonClick').play();
-    document.getElementById('botonClick').onended = function(){
-      document.getElementById('cartelReglas').style.display = "none";
-    }
-  }
+    document.getElementById('cartelReglas').style.display = "none";
+}

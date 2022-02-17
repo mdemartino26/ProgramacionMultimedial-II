@@ -47,8 +47,7 @@ button:active{
       background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
       border-radius: 0.3em;
       border: none;
-      color: white;
-      text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+      color: #4C3d53;
       height: 4em;
      font-family: monospace;
       padding: 1em;
@@ -134,8 +133,7 @@ button:active{
     background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
     border-radius: 0.3em;
     border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    color: #4C3d53;
     font-family: monospace;
 }
 
@@ -188,10 +186,54 @@ button:active{
     background-image: linear-gradient(#fac3d9, #e77aa6);
     border-radius: 0.5em;
     border: none;
-    color: white;
+    color: #4C3d53;
     margin-left: 0.5em;
     margin-right:0.5em
 }
+
+
+#cartelReglas{
+    position: absolute;
+    background-color: rgba(44, 34, 48, .9);
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cartelReglas button{
+    font-family: monospace;
+    float: right;
+    margin: 1em;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: #4C3d53;
+}
+
+#cartelReglas p {
+    font-family: monospace;
+    color: white;
+    padding: 5vh;
+}
+
+#reglas{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: #4C3d53;
+}
+
 
 @keyframes spin {
     100% {transform: rotate(180deg)}
@@ -237,8 +279,7 @@ button:active{
         background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
         border-radius: 0.3em;
         border: none;
-        color: white;
-        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        color: #4C3d53;
         height: 2em;
         padding: 0;
         padding-left: 0.5em;
@@ -279,11 +320,20 @@ button:active{
         width: 60%;
         font-weight: 200;
     }
+
+    #reglas{
+        width: 5vw;
+    }
+
     
 
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    #reglas{
+        width: 5vw;
+    }
 
     .aparecer{
         text-align: center;
@@ -307,8 +357,7 @@ button:active{
         background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
         border-radius: 0.3em;
         border: none;
-        color: white;
-        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        color: #4C3d53;
         height: 2em;
         padding: 0;
         margin-left: 0.3em;

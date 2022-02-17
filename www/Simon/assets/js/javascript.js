@@ -46,7 +46,8 @@ class Simon {
     }
 
     //Verifica los turnos
-    turnos(){
+    turnos(){      
+        document.getElementById('cartelReglas').style.display = "none";
         document.getElementById("confirmacionAtras").style.display = "none";
         if (turno === 1){
             this.display.encender.onclick = () => this.startGame();
@@ -255,6 +256,19 @@ function cambiarLocation(){
     document.getElementById('clickBoton').onended = function(){
     window.location.replace('../index.html');
     }}
+
+function verReglas(){
+  document.getElementById('clickBoton').play();
+  document.getElementById('cartelReglas').style.display = "block";
+}
+
+function cerrarCartel(){
+  document.getElementById('clickBoton').play();
+  document.getElementById('cartelReglas').style.display = "none";
+
+}
+
+
 
 
 
