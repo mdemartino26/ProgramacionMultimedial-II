@@ -22,6 +22,13 @@ header h1{
     margin: 0;
 }
 
+button:active{
+    background-color: #ED91B6;
+  box-shadow: 0 1em #4C3d53;
+  transform: translateY(.5em);
+}
+
+
 #titulo {
     text-align: center;
     font-family:'Helvetica Neue', sans-serif;
@@ -53,6 +60,20 @@ header h1{
       margin-top: 1.5em;
   }
 
+  .botonCartel{
+    font-family: monospace;
+    width: 45%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
 
 .pink{
     border:#ED91B6 .2em solid; 
@@ -64,8 +85,8 @@ header h1{
     border:#FBAECD .2em solid; 
 }
 .container {
-    width: 34%;
-    height: 50vh;
+    width: 60%;
+    height: 58vh;
     margin: 0 auto;
     font-size: 25px;
     display: grid;
@@ -73,7 +94,7 @@ header h1{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 1em;
-    border-radius: 7%;
+    border-radius: 1%;
     font-family: 'Helvetica Neue', sans-serif;
     background: #2C2230;
     color: white;
@@ -172,7 +193,7 @@ img {
 }
 
 .container div img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     border-radius: 7%;
     overflow: hidden;
@@ -218,6 +239,20 @@ img {
     margin-bottom: 1.5%;
 }
 
+.botonAlinear{
+    line-height: 2em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 4em;
+    padding: 1em;
+    margin-top: 1.5em;
+}
+
 /* FLIP */
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -261,7 +296,7 @@ img {
 
 /* Style the back side */
 .flip-box-back {
-    color: white;
+    background-color: white;
     transform: rotateY(180deg);
 }
 
@@ -281,10 +316,10 @@ img {
     border-radius: .5em;
     color:white;
     padding:.5em;
+    width:10%;
 }
 
 #jugador1 {
-    
     text-align: center;
     background-image:  linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
 
@@ -306,65 +341,7 @@ img {
     font-size: 1.5em;
 }
 
-#winDiv {
-    z-index: 10;
-    top: 9%;
-    width: 40%;
-    height: 557px;
-    background-color: rgba(44, 34, 48, 0.91);
-    border-radius: 4em;
-    color: white;
-    position: absolute;
-    left: 30%;
-    -webkit-animation: fadein 1s;
-    transition: 0.3s;
-}
 
-@-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-#winDiv h1 {
-    font-size: 3em;
-    position: absolute;
-    top: 26%;
-    font-family: monospace;
-}
-
-#winDiv p {
-    padding: 19%;
-    text-align: center;
-}
-
-#winDiv span {
-    background-color:#ED91B6;
-    color:
-        #f7f7f7;
-    border-radius: 1em;
-    padding: 2em;
-    cursor: pointer;
-    position: absolute;
-    bottom: 17%;
-    transition: 0.3s;
-    box-shadow: -1px 2px 22px -2px rgba(0, 0, 0, 0.75);
-    font-family: monospace;
-}
-
-#winDiv span:hover {
-    background-color:#ED91B6;
-    color: #8f8c8c;
-    transform: scale(0.9);
-    font-family: Nunito, sans-serif;
-
-}
 
 #landscape{
     display: none;
@@ -377,16 +354,31 @@ img {
 }
 
 .appear {
-
-    display: flex;
+    transition: 0.3s;
     justify-content: center;
     align-items: center;
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    position: absolute;
+    height: 11em;
+    z-index: 1000;
+    background-color: rgba(76, 61, 83, .9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rowdies';
+    border-radius: 1%;
+}
+
+.appear h3{
+    font-size: 2em;
 }
 
 #turn {
     color: white;
     margin: 0 auto;
-    font-family: Nunito, sans-serif;
     text-align: center;
     margin-top: 2.5%;
     font-size: 2em;
@@ -399,7 +391,61 @@ address {
     font-family: Nunito, sans-serif;
 }
 
+#cartelReglas{
+    position: absolute;
+    background-color: rgba(44, 34, 48, .9);
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cartelReglas button{
+    font-family: monospace;
+    float: right;
+    margin: 1em;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+#cartelReglas p {
+    font-family: monospace;
+    color: white;
+    padding: 5vh;
+}
+
+#reglas{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
 @media only screen and (max-width: 768px){
+
+    .appear{
+        text-align: center;
+        font-size: 1em;
+        padding: 2em;
+        height: auto;
+    }
+
+    .appear h3{
+        font-size: 1em;
+    }
+
     .container{
         width: 80vw;
         height: 60vh;
@@ -438,6 +484,7 @@ address {
 
     header{
         font-size: 1.5em;
+        height: 17vh;
     }
 
     #icono{
@@ -474,6 +521,7 @@ address {
 
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+
     #landscape{
         display:none;
 
@@ -518,9 +566,10 @@ address {
 }
 
 .container{
+    margin:0;
+    padding:0.5em;
     width: 60vw;
-    height: 60vh;
-
+    height: 58vh;
 }
 
 .jugador{
@@ -529,16 +578,29 @@ address {
     padding-left: 0.2em;
     padding-right: 0.2em;
     font-size: 1em;
+    width: 10%;
+}
+
+#jugador1{
+    width:8%;
+    overflow: hidden;
+}
+
+#jugador2{
+    width:8%;
+    overflow: hidden;
 }
 
 
 #points_jug1{
     margin:0;
+    text-align: center;
 }
 
 
 #points_jug2{
     margin:0;
+    text-align: center;
 }
 
 #winDiv{
@@ -562,5 +624,45 @@ address {
     bottom: 17%;
     transition: 0.3s;
     font-family: monospace;
+}
+
+#selectSize{
+    margin-top:0;
+}
+
+#turn{
+    margin-top:0;
+}
+
+#BotonReiniciar{
+    margin-top:0;
+}
+
+.botonAlinear{
+    font-size: 0.7em;
+    height: 2em;
+    padding: 0;
+}
+
+#reglas{
+    font-size: 0.5em;
+    text-align: center;
+}
+
+#cartelReglas{
+    padding: 0;
+}
+
+#cartelReglas p {
+    padding: 15vh;
+    font-size: 0.7em;
+}
+
+#cartelReglas button{
+    width: 5vw;
+}
+
+.fa-solid{
+    font-size: 0.5em;
 }
 }

@@ -68,6 +68,7 @@ button{
    margin-left:1em;
     padding: 1em;
     margin-top: 1.5em;
+    margin-right: 1em;
   }
 
 
@@ -119,6 +120,21 @@ main h1{
     font-family: 'Rowdies';
 }
 
+.botonCartel{
+    font-family: monospace;
+    width: 45%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+    margin-left: 0.5em;
+}
+
 #ganador {
     text-align: center; 
     margin: 4em;
@@ -165,7 +181,68 @@ button:active{
     font-family: 'Rowdies';
 }
 
+.aparecer{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    position: absolute;
+    height: 11em;
+    z-index: 1000;
+    background-color: rgba(44, 34, 48, .9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rowdies';
+    border-radius: 1%;
+}
 
+.aparecer h3{
+    font-size: 2em; 
+    text-align: center;
+}
+
+#cartelReglas{
+    position: absolute;
+    background-color: rgba(44, 34, 48, .9);
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cartelReglas button{
+    font-family: monospace;
+    float: right;
+    margin: 1em;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+#cartelReglas p {
+    font-family: monospace;
+    color: white;
+    padding: 5vh;
+}
+
+#reglas{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
 
 
 
@@ -264,6 +341,29 @@ button:active{
             padding: 4em;
             white-space: nowrap;
         }
+
+        .aparecer{
+            text-align: center;
+            font-size: 1em;
+            padding: 2em;
+            height: auto;
+        }
+
+        .aparecer h3{
+            font-size: 1em;
+        }
+
+    #reglas{
+        width: 7vw;
+        height: 5vh;
+        font-size: 1em;
+    }
+
+    #cartelReglas button{
+        width: 15vw;
+        height: 15vh;
+        font-size: 1em;
+    }
     
 }
 
@@ -331,6 +431,17 @@ button:active{
         padding-left: 0.5em;
         padding-right: 0.5em;
         margin-top: 1em;
+    }
+
+    .aparecer{
+        text-align: center;
+        font-size: 1em;
+        padding: 2em;
+        height: auto;
+    }
+
+    .aparecer h3{
+        font-size: 1em;
     }
 
 }

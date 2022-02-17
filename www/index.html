@@ -58,23 +58,24 @@
 
         <section id="ingreso">
             <h1 class="glow">Ingresar usuarios</h1>
-            <form submit="javascript:corroborar()">
+            <div>
                 <div id="ingreso1">
                 <h3> Usuario 1 </h3>
                 
-                <img id="myImage1" src="../assets/img/avatars/1.jfif" alt="usuario1">
+                <img id="myImage1" src="assets/img/avatars/1.jpg" alt="usuario1">
                 <button id="btnImagen1" disabled> Sacar foto </button>
                 <label> Nombre: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nombre"
                     id="nombretxt">
                 <label> Nickname: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nickname"
                     id="nicktxt">
-               
+                <button id="continuar" onclick="pasarUsuario()"> continuar </button>
             </div>
+
             <div id="ingreso2">
                 <h3> Usuario 2 </h3>
 
-                <img id="myImage2" src="../assets/img/avatars/2.jfif" alt="usuario2">
-                <button id="btnImagen2" disabled> Sacar foto</button>
+                <img id="myImage2" src="assets/img/avatars/2.jpg" alt="usuario2">
+                <button id="btnImagen2" disabled> Sacar foto </button>
                 <label> Nombre: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nombre"
                     id="nombretxt2">
                 <label> Nickname: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nickname"
@@ -83,12 +84,15 @@
 
             </div>
                 <button type="button" id="cargarDatos" value="ingresar" onclick="corroborar()">Guardar</button>
-            </form>
+        </div>
         </section>
 
        
 
-
+        <div id="secciones">
+            <button id="irUsuarios" class="seccionesEstilos" onclick="irUsuarios()">Usuarios</button>
+            <button id="irJuegos" class="seccionesEstilos" onclick="irJuegos()">Juegos</button>
+        </div>
 
 
 
@@ -97,7 +101,7 @@
             <section id="gameButtons">
                 <li class="pink" ><a href="ta-te-quieto/index.html">TaTeTi</a></li>
 
-                <li class="pinker"><a href="memotest/memotest.html">Memotest</a></li>
+                <li class="pinker"><a href="memotest/index.html">Memotest</a></li>
 
                 <li class="pink"><a href="Simon/index.html">Simon</a></li>
 
@@ -107,7 +111,6 @@
         </div>
 
         <section id="usuarios" class="typewriter">
-            <h2 id="titulo">usuarios</h2>
             <article id="usu1"><label type="text" id="nicktxt"></label> <img class="imgUsu" src=""></article>
             <article id="usu2"> <label type="text" id="nicktxt2"></label><img class="imgUsu" src=""> </article>
         </section>

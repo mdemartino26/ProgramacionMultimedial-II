@@ -30,22 +30,31 @@ var audioPagina = 1;
 
 function takePicture(num) {
     document.getElementById("sonidoClick").play();
-
-    navigator.camera.getPicture(onSuccess, onFail, {
+    navigator.camera.getPicture(function (imageData) {
+        var image = document.getElementById("myImage" + num);
+        image.src = "data:image/jpeg;base64," + imageData;
+    }, onFail, {
         quality: 25,
-        destinationType: Camera.DestinationType.FILE_URI,
+        destinationType: Camera.DestinationType.DATA_URL,
         correctOrientation: true,
         targetHeight: 100,
         targetWidth: 100
     });
-    function onSuccess(imageData) {
-        var image = document.getElementById("myImage" + num);
-        image.classList.remove('hidden'); //usar para que no se vea la img rota al principio
-        image.src = "data:image/jpeg;base64," + imageData;
-    }
+}
 
-    function onFail(message) {
-        alert('Failed because: ' + message);
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+
+function pasarUsuario(){
+    nombretxt = document.getElementById("nombretxt").value;
+    nicktxt = document.getElementById("nicktxt").value;
+    if (nombretxt == "" || nicktxt == ""){
+    
+    }else {
+        document.getElementById('ingreso2').style.display = "grid";
+    document.getElementById('cargarDatos').style.display = "";
+    document.getElementById('ingreso1').style.display = "none";
     }
 }
 
@@ -61,11 +70,8 @@ function corroborar() {
     img2 = document.getElementById("myImage2").src;
    
     if (nombretxt == "" || nicktxt == "" || nombretxt2 == "" || nicktxt2 == "" || img1 == "" || img2 == "") {
-       
     } else {
         guardar();
-        document.getElementById("edit").style.display = "";
-        document.getElementById("usuarios").style.display = "";
     };
 };
 
@@ -91,16 +97,20 @@ function guardar() {
     localStorage.setItem("usuario1", JSON.stringify(usuario1));
     localStorage.setItem("usuario2", JSON.stringify(usuario2));
     document.getElementById("ingreso").style.display = "none";
-    document.getElementById("editarProfile").style.display = "";
+    document.getElementById("edit").style.display = "none";
     document.getElementById("cerrarSesion").style.display = "";
-    document.getElementById("usu1").innerHTML = "<img src='" + usuario1.img1 + "'> <div id='nick'> Usuario 1: " + usuario1.nick + " </div> <div> Puntos TaTeTi: " + usuario1.puntajeTTT + "</div> <div> Puntos Memotest: " + usuario1.puntajeMMT + "</div> <div> Puntos Simon: " +usuario1.puntajeS + "</div>";
-    document.getElementById("usu2").innerHTML = "<img src='" + usuario2.img2 + "'> <div id='nick'> Usuario 2: " + usuario2.nick + " </div> <div> Puntos TaTeTi: " + usuario2.puntajeTTT + "</div> <div> Puntos Memotest: " + usuario2.puntajeMMT + "</div> <div> Puntos Simon: " +usuario2.puntajeS + "</div>";
+    document.getElementById("usu1").innerHTML = "<div id='nick'> Usuario 1: " + usuario1.nick + " </div> <img src='" + usuario1.img1 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario1.puntajeTTT + "</div> <div>Memotest: " + usuario1.puntajeMMT + "</div> <div>Simon: " +usuario1.puntajeS + "</div></div>";
+    document.getElementById("usu2").innerHTML = "<div id='nick'> Usuario 2: " + usuario2.nick + " </div> <img src='" + usuario2.img2 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario2.puntajeTTT + "</div> <div>Memotest: " + usuario2.puntajeMMT + "</div> <div>Simon: " +usuario2.puntajeS + "</div></div>";
     document.getElementById("juegos").style.display = "";
+    document.getElementById("irUsuarios").className = "seccionesEstilos";
+    document.getElementById("irJuegos").className = "seccionesEstilosSelect";
+    document.getElementById("secciones").style.display = "";
+    document.getElementById("usuarios").style.display = "none";
     document.getElementById("sonidoClick").play();
 }
 
 function checkUsuarios() {
-    
+    document.getElementById("secciones").style.display = "none";
     document.getElementById("juegos").style.display = "none";
     document.getElementById("usuarios").style.display = "none";
     var usuario1 = localStorage.getItem("usuario1")
@@ -108,15 +118,17 @@ function checkUsuarios() {
     if (usuario1 && usuario2) {
         usuario1 = JSON.parse(usuario1);
         usuario2 = JSON.parse(usuario2);
-        document.getElementById("usuarios").style.display = "";
         document.getElementById("ingreso").style.display = "none";
-        document.getElementById("usu1").innerHTML = "<div id='nick'> Usuario 1: <br> " + usuario1.nick + " </div> <img src='" + usuario1.img1 + "'> <div> Puntos TaTeTi: " + usuario1.puntajeTTT + "</div> <div> Puntos Memotest: " + usuario1.puntajeMMT + "</div> <div> Puntos Simon: " +usuario1.puntajeS + "</div>";
-        document.getElementById("usu2").innerHTML = "<img src='" + usuario2.img2 + "'> <div id='nick'> Usuario 2: " + usuario2.nick + " </div> <div> Puntos TaTeTi: " + usuario2.puntajeTTT + "</div> <div> Puntos Memotest: " + usuario2.puntajeMMT + "</div> <div> Puntos Simon: " +usuario2.puntajeS + "</div>";
+        document.getElementById("usuarios").style.display = "none";
+        document.getElementById("secciones").style.display = "";
+        document.getElementById("usu1").innerHTML = "<div id='nick'> Usuario 1: " + usuario1.nick + " </div> <img src='" + usuario1.img1 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario1.puntajeTTT + "</div> <div>Memotest: " + usuario1.puntajeMMT + "</div> <div>Simon: " +usuario1.puntajeS + "</div></div>";
+        document.getElementById("usu2").innerHTML = "<div id='nick'> Usuario 2: " + usuario2.nick + " </div> <img src='" + usuario2.img2 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario2.puntajeTTT + "</div> <div>Memotest: " + usuario2.puntajeMMT + "</div> <div>Simon: " +usuario2.puntajeS + "</div></div>";
         document.getElementById("juegos").style.display = "";
-        document.getElementById("editarProfile").style.display = "";
-        document.getElementById("cerrarSesion").style.display = "";
+        document.getElementById("irUsuarios").className = "seccionesEstilos";
+        document.getElementById("irJuegos").className = "seccionesEstilosSelect";
+        document.getElementById("edit").style.display = "none";
     } else {
-        document.getElementById("editarProfile").style.display = "none";
+        document.getElementById("edit").style.display = "none";
         document.getElementById("cerrarSesion").style.display = "none";
     }
 }
@@ -126,13 +138,11 @@ function loadInputs() {
     document.getElementById("cargarDatos").disabled = false;
     var btnImagen1 = document.getElementById("btnImagen1");
     btnImagen1.disabled = false;
-    btnImagen1.setAttribute("formaction", "javascript:takePicture(1)");
 
     document.getElementById("nombretxt").disabled = false;
     document.getElementById("nicktxt").disabled = false;
     var btnImagen2 = document.getElementById("btnImagen2");
     btnImagen2.disabled = false;
-    btnImagen2.setAttribute("formaction", "javascript:takePicture(2)");
    
     document.getElementById("nombretxt2").disabled = false;
     document.getElementById("nicktxt2").disabled = false;
@@ -155,10 +165,12 @@ function editarPerfiles() {
     obj2 = JSON.parse(obj2);
     document.getElementById("nombretxt2").value = obj2.nombre;
     document.getElementById("nicktxt2").value = obj2.nick;
-
     document.getElementById("juegos").style.display = "none";
     document.getElementById("edit").style.display = "none";
     document.getElementById("usuarios").style.display = "none";
+    document.getElementById("secciones").style.display = "none";
+    document.getElementById("irUsuarios").className = "seccionesEstilos";
+    document.getElementById("irJuegos").className = "seccionesEstilosSelect";
 
    
 }
@@ -181,6 +193,24 @@ function audio(){
         audioPagina = 1;
     }
    
+}
+
+function irUsuarios(){
+    document.getElementById("sonidoClick").play();
+    document.getElementById("usuarios").style.display = "";
+    document.getElementById("juegos").style.display = "none";
+    document.getElementById("edit").style.display = "";
+    document.getElementById("irUsuarios").className = "seccionesEstilosSelect";
+    document.getElementById("irJuegos").className = "seccionesEstilos";
+}
+
+function irJuegos(){
+    document.getElementById("sonidoClick").play();
+    document.getElementById("usuarios").style.display = "none";
+    document.getElementById("juegos").style.display = "block";
+    document.getElementById("edit").style.display = "none";
+    document.getElementById("irUsuarios").className = "seccionesEstilos";
+    document.getElementById("irJuegos").className = "seccionesEstilosSelect";
 }
 
 var app = {
@@ -208,13 +238,16 @@ var app = {
  */
         console.log('Received Event: ' + id);
 
+        document.getElementById('ingreso2').style.display = "none";
+        document.getElementById('cargarDatos').style.display = "none";
         var btnImagen1 = document.getElementById("btnImagen1");
         btnImagen1.disabled = false;
-        btnImagen1.setAttribute("formaction", "javascript:takePicture(1)");
+        btnImagen1.onclick = function() { takePicture(1) }
         var btnImagen2 = document.getElementById("btnImagen2");
         btnImagen2.disabled = false;
-        btnImagen2.setAttribute("formaction", "javascript:takePicture(2)");
-
+        btnImagen2.onclick = function() { takePicture(2) }
+        document.getElementById('usuarios').style.display = "none";
+        document.getElementById("edit").style.display = "none";
         
 
 

@@ -6,56 +6,69 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
 </head>
 
-<body>
+<body onload="iniciar()">
 
     <header>
         <img id="icono"  src="../assets/img/icons/heart.png" alt="icono del sitio">
         <h1>Comfi Memotest</h1>
         <button class="botonMenu" onclick="audio()"> Música </button>
-        <button class="botonMenu" onclick="location.href='../index.html';">Atras</button>
+        <button class="botonMenu" onclick="confirmarSalir()">Atras</button>
     </header>
 
     <main>
 
         <div id="landscape"><p>Rotar celular para jugar</p><img src="assets/img/girar.gif"></div>
         <div id="winDiv" class="dissapear"></div>
+        <div id="confirmacionAtras">
+                <h3>¿Querés salir?</h3>
+                <button class="botonCartel" onclick="document.getElementById('botonClick').play(); document.getElementById('confirmacionAtras').style.display = 'none';">No</button>
+                <button class="botonCartel" onclick="cambiarLocation()">Si</button>
+          </div>
         <div id="maincontainer">
 
             <div id="alinear">
-                <select required  id="selectSize" name="selectSize" class="botonMenu" onclick=" document.getElementById('botonClick').play();" onchange="drawBoard(this)">
+                <select required  id="selectSize" name="selectSize" class="botonAlinear" onclick=" document.getElementById('botonClick').play();" onchange="drawBoard(this)">
                     <option value="" hidden>Tablero</option>
                     <option value="4" class="pink">4x4</option>
                     <option value="5" class="pinker">5x5</option>
                     <option value="6" class="pink">6x6</option>
                 </select>
                 <h3 id="turn">Turno: </h3>
-                <button id="BotonReiniciar" class="botonMenu" onclick="restart()">Reiniciar</button>
+                <button id="BotonReiniciar" class="botonAlinear" onclick="restart()">Reiniciar</button>
             </div>
          
         <div id="flex-box">
            
-        <div id="jugador1" class="jugador">Jugador <span id="nick1"></span>:
+        <div id="jugador1" class="jugador"><span id="nick1"></span>:
             <p id="points_jug1">0</p>
          </div>
 
          <div class="container">
         </div>
-        <div id="jugador2" class="jugador"> Jugador <span id="nick2"></span>:
+        <div id="jugador2" class="jugador"><span id="nick2"></span>:
                 <p id="points_jug2">0</p>
             </div>
         </div>
+
+        <div id="cartelReglas">
+                <button id="cerrarCartel" onclick="cerrarCartel()"><i class="fa-solid fa-xmark"></i></button>
+                <p>Los jugadores deben ir descubriendo las celdas de a una e ir recordando dónde está cada pieza del par, para así reunirlos y sumar puntos. El objetivo es lograr reunir la mayor cantidad de pares. El jugador que reúne la mayor cantidad de pares es el ganador. Concluye cuando todos los pares de la grilla son formados.</p>
+            </div>
+    
+        <button id="reglas" onclick="verReglas()"><i class="fa-solid fa-question"></i></button>
 
         </div>
     </main>
 
     <footer>
-        <script type="text/javascript" src="./assets/js/aplicacion.js"></script>
+        <script type="text/javascript" src="./assets/js/javascript.js"></script>
         <!--<address>Creado por: Dieguillo, Marian, Sabri y Alva.</address>-->
     </footer>
     

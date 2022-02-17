@@ -39,6 +39,10 @@ var puntajeMMT2 = jugador2.puntajeMMT;
 document.getElementById("nick1").innerHTML = nick1;
 document.getElementById("nick2").innerHTML = nick2;
 
+function iniciar(){
+    document.getElementById("confirmacionAtras").style.display = "none";
+    document.getElementById('cartelReglas').style.display = "none";
+}
 
 function drawBoard(selectedSize) {
     //asigna a la variable boardsize la longitud del tablero elegida por el usuario
@@ -124,17 +128,17 @@ function clickTile(divId) {
                 console.log("PARTIDA TERMINADA");
                 var winDiv = document.getElementById("winDiv");
                 if (player1.pairs > player2.pairs) {
-                    winDiv.innerHTML = '<h1>¡Ganó ' + nick1 + '! </h1><span onclick="restart()">Empezar nueva partida</span>';
+                    winDiv.innerHTML = '<h2>¡Ganó ' + nick1 + '! </h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                     winDiv.className = "appear";
                     puntajeMMT1 = puntajeMMT1 + 1; 
                     jugador1.puntajeMMT = puntajeMMT1;
                     localStorage.setItem("usuario1", JSON.stringify(jugador1))
                 } else {
                     if (player1.pairs === player2.pairs) {
-                        winDiv.innerHTML = '<h1>¡Empate!</h1><span onclick="restart()">Empezar nueva partida</span>';
+                        winDiv.innerHTML = '<h2>¡Empate!</h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                         winDiv.className = "appear";
-                    } else {
-                        winDiv.innerHTML = '<h1>¡Ganó ' + nick2 + '!</h1><span onclick="restart()">Empezar nueva partida</span>';
+                    } else if (player2.pairs > player1.pairs){
+                        winDiv.innerHTML = '<h2>¡Ganó ' + nick2 + '!</h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                         winDiv.className = "appear";
                         puntajeMMT2 = puntajeMMT2 + 1; 
                     jugador2.puntajeMMT = puntajeMMT2;
@@ -210,7 +214,7 @@ function setTilesLogicalBoard(boardSize) {
         board[positions[i].row][positions[i].col] = {
             valor: ficha, //QUE FICHA ES
             estado: 0, //YA FUE ENCONTRADA LA PAREJA Y POR QUE JUGADOR --> 0 (no fue encontrada), 1 (fue encontrada por JUG1, 2 (FUE ENCONTRADA POR JUG2))
-            imagen: "./assets/img/" + ficha + ".jpg", //SRC DE LA IMG
+            imagen: "./assets/img/" + ficha + ".png", //SRC DE LA IMG
         };
         //aumenta contador interno
         contInterno++;
@@ -276,6 +280,18 @@ function restart() {
   
 }
 
+function confirmarSalir(){
+    document.getElementById('botonClick').play();
+    document.getElementById("confirmacionAtras").style.display = "";
+    document.getElementById("confirmacionAtras").className = "appear";
+}
+
+function cambiarLocation(){
+    document.getElementById('botonClick').play();
+    document.getElementById('botonClick').onended = function(){
+    window.location.replace('../index.html');
+    }}
+
 
 var audioPagina = 1;
 
@@ -291,3 +307,14 @@ function audio(){
    
 }
 
+function verReglas(){
+    document.getElementById('botonClick').play();
+    document.getElementById('cartelReglas').style.display = "";
+  }
+  
+  function cerrarCartel(){
+    document.getElementById('botonClick').play();
+    document.getElementById('botonClick').onended = function(){
+      document.getElementById('cartelReglas').style.display = "none";
+    }
+  }

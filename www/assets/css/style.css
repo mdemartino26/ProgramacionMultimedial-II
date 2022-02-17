@@ -57,6 +57,7 @@ border-spacing: 0;
 
 body{
     background: #4C3d53;
+    font-family: monospace;
    /* background-image: url("../img/bg.jpg")*/
 }
 
@@ -69,9 +70,7 @@ header{
     display: flex;
 }
 
-.titulo{
-    display: none;
-}
+
 
 #icono{
     width: 1em;
@@ -147,6 +146,10 @@ main {
     color:white;
 }
 
+#ingreso div{
+    margin: 0 auto;
+}
+
 #ingreso h1{
     padding: 1em;
     font-size: 2em;
@@ -154,6 +157,7 @@ main {
 }
 
 #ingreso h3{
+    margin-top: 0;
     font-size: 1.5em;
     padding-top: 1em;
     font-family: 'Rowdies', currsive;
@@ -174,8 +178,13 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
+    width: 25%;
     padding: 1em;
+}
+
+#continuar {
+    margin:0 auto;
+    margin-top: 2em;
 }
 
 #ingreso2{
@@ -188,7 +197,7 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
+    width: 25%;
     padding:1em;
 }
 
@@ -234,23 +243,68 @@ input{
 }
 
 #cargarDatos{
-    margin-top: 3em;
+    margin-top: 2em;
+}
+
+#secciones{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.seccionesEstilos{
+    width: 46%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border-color: #e77aa6;
+    border-radius: 0.5em;
+    margin-top: 1.5em;
+    height: 4em;
+    padding: 1em;
+    border: 4px solid #e77aa6;
+    color: #e77aa6;
+    background-color: transparent;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.seccionesEstilosSelect{
+    width: 46%;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border-color: #e77aa6;
+    border-radius: 0.5em;
+    margin-top: 1.5em;
+    height: 4em;
+    padding: 1em;
+    border: 4px solid #e77aa6;
+    color: white;
+    background-color: #e77aa6;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 #usuarios {
     padding: 1em;
-  overflow: hidden;
+    overflow: hidden;
     display: flex;
-  width: 40%;
-  margin: 0 auto;
-  color:white;
+    width: 40%;
+    margin: 0 auto;
+    color:white;
+    margin-top: 3em;
+}
+
+#nick{
+    text-align: center;
+    font-size: 1.5em;
 }
 
 
 
 #usu1{
-    width: 40%;
-    background-color: #ED91B6;
+    width: 45%;
+    background-color: #e77aa6;
     padding: 1em;
     border-radius: 10px;
     margin-right: 1em;
@@ -258,9 +312,8 @@ input{
 }
 
 #usu2 {
-    float: right;
-    width: 40%;
-    background-color: #FBAECD;
+    width: 45%;
+    background-color: #ED91B6;
     padding: 1em;
     border-radius: 10px;
     line-height: 2em;
@@ -302,38 +355,42 @@ input{
 }
 
 #juegos {
-    text-align: center;
-    margin-top: 4em;
-    height: 48vh;
+    list-style: none;
+    margin: 1em;
+    border-radius: 1em;
+    font-family: 'Rowdies';
 }
 
 #gameButtons{
+
     display: flex;
+    margin: 0 auto;
+    margin-top: 4em;
 }
 
 #juegos li {
     list-style: none;
-    padding: 1em;
     margin: 1em;
-    border-radius: 1em;
+    border-radius: 0.5em;
     width: 33%;
     font-size: 1.5em;
     font-family: 'Rowdies';
 }
 
 .pink {
-    border:#ED91B6 .2em solid; 
-    background-color: #ED91B6;
+    border:#e77aa6 .2em solid; 
+    background-color: #e77aa6;
 }
 
 .pinker{
-    background-color: #FBAECD;
-    border:#FBAECD .2em solid; 
+    background-color: #ED91B6;
+    border:#ED91B6 .2em solid; 
 }
 
 
 #juegos h2{
     width:30%;
+    margin-top:2em;
 }
 
 .typewriter h2 {
@@ -362,6 +419,9 @@ input{
 a {
     color: white;
     text-decoration: none;
+    padding: 1em;
+    display: block;
+    text-align:center;
    
 }
 
@@ -397,10 +457,11 @@ button:active{
 
 footer { 
     left: 0;
-    bottom: 0;
+    position: absolute;
+    bottom: 0px;
     width: 100%;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     text-align: center;
     color: white;
     font-family: monospace;
@@ -434,14 +495,44 @@ footer {
     color: white;
 }
 
-@media only screen and (max-width: 768px){
+.puntajesUsuarios{
+    width: 55%;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
 
-    #titulo{
-        display: block;
+.puntajesUsuarios h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 768px){
+    
+
+    #secciones{
+        width:60%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .seccionesEstilos{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 1em;
+    line-height: 0;
+    width:46%;
+    }
+
+    .seccionesEstilosSelect{
+        margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 1em;
+    line-height: 0;
     }
 
     h2{
-        font-size: 1.5em;
+        font-size: 1.2em;
+        padding:1em;
     }
     #usuarios{
         display: block;
@@ -450,22 +541,36 @@ footer {
         padding: 0;
         padding-top: 1em;
         padding-bottom: 1em;
+        margin-top: 5vh;
     }
 
     #usu1{
-        width: 60%;
+        width: 90%;
         margin: 0 auto;
+        height: 15em;
     }
 
     #usu2{
-        width: 60%;
+
+        width: 90%;
         margin: 0 auto;
-        float: none;
-        margin-top: 1em;
+        height: 15em;
+        margin-top:1em;
+    }
+
+    #nick{
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    #juegos{
+        margin-top:3em;
     }
 
     #gameButtons{
         display: block;
+        margin-top: 0;
     }
 
     #juegos li{
@@ -492,6 +597,26 @@ footer {
         font-size: 2em;
         white-space: nowrap; 
         margin: 0 auto;
+    }
+
+    #usu1 img {
+        display: flex;
+        float: left;
+        width: auto;
+        height: 18vh;
+    }
+
+    #usu2 img {
+        display: flex;
+        float: left;
+        width: auto;
+        height: 18vh;
+    }
+
+    .puntajesUsuarios {
+        width:50%;
+        margin-left: 14em;
+        font-size: 1.1em;
     }
 
     #icono {
@@ -556,21 +681,121 @@ footer {
         from, to { border-color: transparent }
         50% { border-color:#e60073 }
       }
+
+    .puntajesUsuarios h3 {
+        font-size: 1em;
+    }
     
-    
+      footer { 
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+}
+
 }
 
 
-@media screen and (orientation: landscape) {
+
+@media only screen and (max-width: 768px) and (orientation: landscape){
+
+    header {
+        height: 15vh;
+    }
+
+    #secciones{
+        margin: 0 auto;
+        margin-top: 0;
+    }
+
+    #usuarios{
+        display:flex;
+        height: 45vh;
+        padding-top: 1em;
+        padding-bottom: 0.5;
+    }
+
+    #usu1{
+        width:45%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        height: auto;
+    }
+
+    #usu1 img{
+        display: flex;
+        width: 30%;
+        float: left;
+    }
+
+    #usu2{
+        width:45%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        height: auto;
+        margin-top: 0;
+    }
+
+    #usu2 img{
+        display: flex;
+        width: 30%;
+        float: left;
+    }
+
+    .botonesExtra{
+        margin-top: 0;
+    }
+
+    #nick{
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .seccionesEstilos{
+        width: 47%;
+    }
+
+    .seccionesEstilosSelect{
+        width: 47%;
+    }
+
+    .puntajesUsuarios {
+        width: 60%;
+        margin-left: 7em;
+        font-size: 1.1em;
+    }
+
+    #gameButtons{
+        display:flex;
+    }
+
+    #juegos{
+        width: 95%;
+    }
+
+    #juegos h2{
+        display: none;
+    }
+
+    #juegos li{
+        font-size:1.3em;
+        margin:0.5em;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) and (orientation: landscape) {
+
+    main{
+        width: 100%;
+        margin: 0 auto;
+    }
+
     #juegos {
         text-align: center;
         margin-top: 1em;
         height: 48vh;
     }
 
-    #titulo{
-        display: none;
-    }
     
     #gameButtons{
         display: flex;
@@ -578,7 +803,6 @@ footer {
     
     #juegos li {
         list-style: none;
-        padding: 1em;
         margin: 1em;
         border-radius: 1em;
         width: 33%;
@@ -600,23 +824,113 @@ form{
     width:45%;
 }
 
-#cargarDatos{
-    margin-top: 10em;
-    height: 4em;
-}
 }
 
-@media only screen and (max-width: 732px) and (orientation: landscape) {
+
+@media only screen and (min-width: 768px) and (max-width: 1600px){
+
     #usuarios{
         width: 60%;
-        margin: 0 auto;
-        margin-top: 7em;
-        display: flex;
+        height: 50vh;
     }
 
-    #titulo{
-        display: none;
+    #usu1{
+        width: 45%;
+        height: auto;
     }
+
+    #usu1{
+        width: 45%;
+        height: auto;
+        margin-right: 1em;
+    }
+
+    #usu2{
+        width: 45%;
+        height: auto;
+    }
+
+    #usu1 img{
+        width: 50%;
+        margin-bottom: 0.5em;
+    }
+
+    #usu2 img{
+        width: 50%;
+        margin-bottom: 0.5em;
+    }
+
+    .puntajesUsuarios{
+        text-align: center;
+    }
+
+   
+#juegos h2{
+    font-size: 1.5em;
+    margin-top: 3%;
+    width: 60%;
+
+}
+
+#gameButtons{
+    margin-top:3%;
+}
+
+#secciones{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccionesEstilosSelect{
+    width: 30%;
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    margin-left:0.5em;
+    height: 2em;
+}
+
+
+.seccionesEstilos{
+    width: 30%;
+    line-height: 0em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    height: 2em;
+}
+
+
+#nick{
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#editarProfile{
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 0.5em;
+    display: flex;
+}
+
 
 
 }

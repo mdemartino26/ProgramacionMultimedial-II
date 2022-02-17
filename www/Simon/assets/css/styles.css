@@ -23,6 +23,13 @@ h1{
     margin: 0;
 }
 
+button:active{
+    background-color: #ED91B6;
+  box-shadow: 0 1em #4C3d53;
+  transform: translateY(.5em);
+}
+
+
 
 #icono{
     width: 1em;
@@ -68,8 +75,8 @@ h1{
     width:33%;
 }
 .maincontainer{
-    position: relative;
-    margin-top: 5em;
+    position: relative;    
+    margin-top: 15vh;
     padding: 1em;
 
 }
@@ -84,8 +91,8 @@ h1{
 
 .square{
     border-radius: 0.3em;
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
     
 }
 
@@ -151,26 +158,26 @@ h1{
     position: absolute;
     height: 11em;
     z-index: 1000;
-    background-color: rgba(44, 34, 48, .6);
+    background-color: rgba(44, 34, 48, .9);
     top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-family: 'Rowdies';
-border-radius: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rowdies';
+    border-radius: 1%;
 }
 
 
 
 .aparecer h3{
-    margin-top: 3em;
+    font-size: 2em; 
 }
 
 .desaparecer{
     display:none;
 }
 
-#reinicio{
+.botonCartel{
     font-family: monospace;
     width: 45%;
     margin: 0 auto;
@@ -182,6 +189,8 @@ border-radius: 3%;
     border-radius: 0.5em;
     border: none;
     color: white;
+    margin-left: 0.5em;
+    margin-right:0.5em
 }
 
 @keyframes spin {
@@ -190,6 +199,18 @@ border-radius: 3%;
 
 
 @media only screen and (max-width: 768px) and (orientation: portrait){
+
+    .aparecer{
+        text-align: center;
+        font-size: 1em;
+        padding: 2em;
+        height: auto;
+    }
+
+    .aparecer h3{
+        font-size: 1em;
+    }
+
     header{
         font-size: 1.5em;
     }
@@ -204,35 +225,35 @@ border-radius: 3%;
 
     #icono{
         width: .5em;
-    height: .5em;
-    margin-top: .5em;
-    margin-left: .5em;
+        height: .5em;
+        margin-top: .5em;
+        margin-left: .5em;
     }
 
     .botonMenu {
         font-weight: bold;
-    font-size: .7em;
-    text-align: center;
-    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
-    border-radius: 0.3em;
-    border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
-    height: 2em;
-    padding: 0;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-top: 1.5em;
-    font-family: monospace;
+        font-size: .7em;
+        text-align: center;
+        background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+        border-radius: 0.3em;
+        border: none;
+        color: white;
+        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        height: 2em;
+        padding: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-top: 1.5em;
+        font-family: monospace;
     }
 
     .coloresSimon{
-        margin-top: 4em;;
+        margin-top: 5em;;
     }
 
     .square{
-        width:8em;
-        height:8em;
+        width:10em;
+        height:10em;
     }
 
     #datos{
@@ -263,27 +284,39 @@ border-radius: 3%;
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    .aparecer{
+        text-align: center;
+        font-size: 1em;
+        padding: 2em;
+        height: auto;
+    }
+
+    .aparecer h3{
+        font-size: 1em;
+    }
+
     header{
         font-size: 1em;
     }
 
    .botonMenu{
-    font-weight: bold;
-    text-align: center;
-    font-size: 1em;
-    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
-    border-radius: 0.3em;
-    border: none;
-    color: white;
-    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
-    height: 2em;
-    padding: 0;
-    margin-left: 0.3em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-top: 1em;
-    margin-right: 1em;
-    font-family: monospace;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1em;
+        background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+        border-radius: 0.3em;
+        border: none;
+        color: white;
+        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        height: 2em;
+        padding: 0;
+        margin-left: 0.3em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-top: 1em;
+        margin-right: 1em;
+        font-family: monospace;
  
    }
 
@@ -321,17 +354,39 @@ border-radius: 3%;
     width: 33%;
 }
 
-.aparecer{
-    width:60%;
-}
-
 .square{
-    height: 8em;
-    width:8em;
+    height: 6em;
+    width:6em;
 }
 
 .maincontainer{
     margin-top:2em;
 }
+
+.botonCartel{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1500px){
+
+    .maincontainer{
+        margin-top: 10vh;
+    }
+
+    .square{
+        border-radius: 0.3em;
+        width: 8em;
+        height: 8em;
+    }
+
+    .botonCartel{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
 
 }

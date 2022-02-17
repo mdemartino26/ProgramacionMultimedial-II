@@ -18,7 +18,7 @@
         <img id="icono"  src="../assets/img/icons/heart.png" alt="icono del sitio">
         <h1>Comfi Simon</h1>
         <button class="botonMenu" onclick="audio()"> Música </button>
-        <button class="botonMenu" onclick="cambiarLocation()">Atras</button>
+        <button class="botonMenu" onclick="confirmarSalir()">Atras</button>
     </header>
 
     <main>
@@ -29,7 +29,12 @@
         <div id="ronda"></div> 
       </div>
 
-      <div id="cartelRdo"></div>
+      <div id="cartelRdo" class="carteles"></div>
+      <div id="confirmacionAtras">
+            <h3>¿Querés salir?</h3>
+            <button class="botonCartel" onclick="document.getElementById('clickBoton').play(); document.getElementById('confirmacionAtras').style.display = 'none';">No</button>
+            <button class="botonCartel" onclick="cambiarLocation()">Si</button>
+      </div>
         <div class="maincontainer">
             
             
@@ -47,7 +52,7 @@
         
     </main>
     <footer>
-        <script type="text/javascript" src="assets/js/app.js" defer></script>
+        <script type="text/javascript" src="assets/js/javascript.js" defer></script>
     </footer>
 
     <audio id="sonidoFondo">

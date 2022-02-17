@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<link
         href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
-        rel="stylesheet">
-	
+		rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -19,7 +18,7 @@
         <img id="icono"  src="../assets/img/icons/heart.png" alt="icono del sitio">
         <h1>Comfi Tateti</h1>
         <button id="audio" onclick="audio()"> Música </button>
-		<button onclick="cambiarLocation()" id="atras">Atras</button>
+		<button onclick="confirmarSalir()" id="atras">Atras</button>
 
        
     </header>
@@ -34,6 +33,19 @@
 			<div id="ganador">Quien gano</div>
 			<button id="reinicio" onclick="reiniciar()">Reiniciar</button>
 		</div>
+
+		<div id="confirmacionAtras">
+				<h3>¿Querés salir?</h3>
+				<button class="botonCartel" onclick="document.getElementById('botonClick').play(); document.getElementById('confirmacionAtras').style.display = 'none';">No</button>
+				<button class="botonCartel" onclick="cambiarLocation()">Si</button>
+		  </div>
+
+		<div id="cartelReglas">
+			<button id="cerrarCartel" onclick="cerrarCartel()"><i class="fa-solid fa-xmark"></i></button>
+			<p>El primer jugador coloca la ficha en cualquiera de los casilleros del tablero. El segundo hará lo mismo con su primera ficha. Se continúa las otras jugadas respetando los turnos, si el jugador consigue alinear tres marcas del mismo tipo, ese jugador hace ¡TA – TE – TI!</p>
+		</div>
+
+		<button id="reglas" onclick="verReglas()"><i class="fa-solid fa-question"></i></button>
 		
 	</main>
 	<footer>

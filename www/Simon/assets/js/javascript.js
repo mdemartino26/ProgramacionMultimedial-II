@@ -47,6 +47,7 @@ class Simon {
 
     //Verifica los turnos
     turnos(){
+        document.getElementById("confirmacionAtras").style.display = "none";
         if (turno === 1){
             this.display.encender.onclick = () => this.startGame();
             
@@ -173,12 +174,12 @@ class Simon {
             console.log("gano el 1");
             document.getElementById("datos").innerHTML = "Ganó: " + nick1;
             document.getElementById("cartelRdo").className = "aparecer";
-            cartelResultado.innerHTML = '<h3> Ganó ' + nick1 + '!</h3> <button id="reinicio" onclick="reload()">Reiniciar</button>';
+            cartelResultado.innerHTML = '<h3> Ganó ' + nick1 + '!</h3> <button class="botonCartel" onclick="reload()">Reiniciar</button>';
             this.buttons.forEach(element =>{
                 element.classList.add('gano');
                 
             });
-            this.updateRonda('🏆 por ' + nick1);
+            this.updateRonda('Finalizada');
             puntajeS1 = puntajeS1 + 1; 
             jugador1.puntajeS = puntajeS1;
             localStorage.setItem("usuario1", JSON.stringify(jugador1));
@@ -187,11 +188,11 @@ class Simon {
             console.log("gano el 2");
             document.getElementById("datos").innerHTML = "Ganó: " + nick2 ;
             document.getElementById("cartelRdo").className = "aparecer";
-            cartelResultado.innerHTML = '<h3> Ganó ' + nick2 + '!</h3> <button id="reinicio" onclick="reload()">Reiniciar</button>';
+            cartelResultado.innerHTML = '<h3> Ganó ' + nick2 + '!</h3> <button class="botonCartel" onclick="reload()">Reiniciar</button>';
             this.buttons.forEach(element =>{
                 element.classList.add('gano');
             });
-            this.updateRonda('🏆 por ' + nick2);
+            this.updateRonda('Finalizada');
             puntajeS2 = puntajeS2 + 1; 
             jugador2.puntajeS = puntajeS2;
             localStorage.setItem("usuario2", JSON.stringify(jugador2));
@@ -201,11 +202,11 @@ class Simon {
             document.getElementById("datos").innerHTML = "Empate";
             document.getElementById("cartelRdo").className = "aparecer";
             cartelResultado.className = "aparecer";
-            cartelResultado.innerHTML = '<h3> Fue un empate!</h3> <button id="reinicio" onclick="reload()">Reiniciar</button>';
+            cartelResultado.innerHTML = '<h3> Fue un empate!</h3> <button class="botonCartel" onclick="reload()">Reiniciar</button>';
             this.buttons.forEach(element =>{
                 element.classList.add('gano');
             });
-            this.updateRonda('empatada');
+            this.updateRonda('Finalizada');
             this.reiniciar();
         }
     }
@@ -241,6 +242,12 @@ function reload(){
         location.reload();
     }
 
+}
+
+function confirmarSalir(){
+    document.getElementById('clickBoton').play();
+    document.getElementById("confirmacionAtras").style.display = "";
+    document.getElementById("confirmacionAtras").className = "aparecer";
 }
 
 function cambiarLocation(){
