@@ -635,16 +635,15 @@ address {
 }
 
 .botonAlinear{
-    font-size: 0.7em;
+    font-size: 0.8em;
     height: 2em;
     padding: 0;
 }
 
 #reglas{
-    font-size: 0.5em;
     text-align: center;
-    width: 5vw;
-    line-height: 3em;
+    width: 9vw;
+    height: 6vh;
 }
 
 #cartelReglas{
@@ -660,7 +659,4 @@ address {
     width: 5vw;
 }
 
-.fa-solid{
-    font-size: 0.5em;
-}
 }

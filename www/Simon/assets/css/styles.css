@@ -322,7 +322,9 @@ button:active{
     }
 
     #reglas{
-        width: 5vw;
+        width: 9vw;
+        height: 6vh;
+        font-size: 1em;
     }
 
     
@@ -420,7 +422,7 @@ button:active{
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1500px){
+@media only screen and (min-width: 768px) and (max-width: 1600px){
 
     .maincontainer{
         margin-top: 10vh;

@@ -432,10 +432,17 @@ button:active{
         font-size: 1em;
         padding: 2em;
         height: auto;
+        width: 45vw;
     }
 
     .aparecer h3{
         font-size: 1em;
     }
 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1500px){
+    .aparecer{
+        width: 45vw;
+    }
 }

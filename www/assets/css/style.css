@@ -759,10 +759,11 @@ footer {
 
     #gameButtons{
         display:flex;
+        margin-top: 10vh;
     }
 
     #juegos{
-        width: 95%;
+        width: 93%;
     }
 
     #juegos h2{
@@ -799,7 +800,6 @@ footer {
         margin: 1em;
         border-radius: 1em;
         width: 33%;
-        font-size: 1.5em;
         font-family: 'Rowdies';
     }
 
