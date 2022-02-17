@@ -33,8 +33,6 @@ function audio(){
 
 //Esto es para hacer que se muestere la tabla por JavaScript
 function genera_tabla() {
-  document.getElementById("confirmacionAtras").style.display = "none";
-  document.getElementById("cartelReglas").style.display = "none";
   // Obtener la referencia del elemento body
   var body = document.getElementsByTagName("main")[0];
   
@@ -280,28 +278,10 @@ function limpiarTabla(){
 }
 
 
-function confirmarSalir(){
-  document.getElementById('botonClick').play();
-  document.getElementById("confirmacionAtras").style.display = "";
-  document.getElementById("confirmacionAtras").className = "aparecer";
-}
-
 function cambiarLocation(){
   document.getElementById('botonClick').play();
   document.getElementById('botonClick').onended = function(){
   window.location.replace('../index.html');
-  }}
-
-function verReglas(){
-  document.getElementById('botonClick').play();
-  document.getElementById('cartelReglas').style.display = "";
-}
-
-function cerrarCartel(){
-  document.getElementById('botonClick').play();
-  document.getElementById('botonClick').onended = function(){
-    document.getElementById('cartelReglas').style.display = "none";
   }
 }
-
 
