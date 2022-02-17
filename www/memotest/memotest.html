@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memotest</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img id="icono"  src="../assets/img/icons/heart.png" alt="icono del sitio">
+        <h1>Comfi Memotest</h1>
+        <button class="botonMenu" onclick="audio()"> Música </button>
+        <button class="botonMenu" onclick="location.href='../index.html';">Atras</button>
+    </header>
+
+    <main>
+
+        <div id="landscape"><p>Rotar celular para jugar</p><img src="assets/img/girar.gif"></div>
+        <div id="winDiv" class="dissapear"></div>
+        <div id="maincontainer">
+
+            <div id="alinear">
+                <select required  id="selectSize" name="selectSize" class="botonMenu" onclick=" document.getElementById('botonClick').play();" onchange="drawBoard(this)">
+                    <option value="" hidden>Tablero</option>
+                    <option value="4" class="pink">4x4</option>
+                    <option value="5" class="pinker">5x5</option>
+                    <option value="6" class="pink">6x6</option>
+                </select>
+                <h3 id="turn">Turno: </h3>
+                <button id="BotonReiniciar" class="botonMenu" onclick="restart()">Reiniciar</button>
+            </div>
+         
+        <div id="flex-box">
+           
+        <div id="jugador1" class="jugador">Jugador <span id="nick1"></span>:
+            <p id="points_jug1">0</p>
+         </div>
+
+         <div class="container">
+        </div>
+        <div id="jugador2" class="jugador"> Jugador <span id="nick2"></span>:
+                <p id="points_jug2">0</p>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <script type="text/javascript" src="./assets/js/aplicacion.js"></script>
+        <!--<address>Creado por: Dieguillo, Marian, Sabri y Alva.</address>-->
+    </footer>
+    
+    <audio id="sonidoFondo">
+        <source src="assets/audio/background.mp3"> 
+     </audio>
+
+     <audio id="sonidoFlip">
+        <source src="assets/audio/flip.mp3"> 
+     </audio>
+
+     <audio id="botonClick">
+		<source src="../assets/audio/buttonClick.mp3"> 
+	 </audio>
+</body>
+
+</html>

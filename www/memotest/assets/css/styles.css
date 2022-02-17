@@ -1,0 +1,566 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background: #4C3d53;
+    font-family: monospace;
+}
+
+header{
+    overflow: hidden;
+    background: #2C2230;
+    color: #FBAECD;
+    font-family: 'Rowdies', cursive;
+    font-weight: 400;
+    display: flex;
+}
+
+header h1{
+    text-align: left;
+    padding: 1em;
+    font-size: 2em;
+    width: 78%;
+    margin: 0;
+}
+
+#titulo {
+    text-align: center;
+    font-family:'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    color:white;
+    margin: 0 auto;
+}
+
+#icono{
+    width: 1em;
+    height: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+.botonMenu{
+    line-height: 2em;
+      font-weight: bold;
+      text-align: center;
+      background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+      border-radius: 0.3em;
+      border: none;
+      color: white;
+      text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+      height: 4em;
+      margin-left:1em;
+      padding: 1em;
+      margin-top: 1.5em;
+  }
+
+
+.pink{
+    border:#ED91B6 .2em solid; 
+    background-color: #ED91B6;
+}
+
+.pinker{
+    background-color: #FBAECD;
+    border:#FBAECD .2em solid; 
+}
+.container {
+    width: 34%;
+    height: 50vh;
+    margin: 0 auto;
+    font-size: 25px;
+    display: grid;
+    gap: 0.3em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1em;
+    border-radius: 7%;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #2C2230;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px -1px #000;
+}
+
+.container div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 7%;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container div.turn1:hover {
+    background-color: rgb(255, 169, 41);
+    transition: all 0.5s ease-out;
+}
+
+.container div.turn2:hover {
+    background-color: rgb(200, 235, 93);
+    transition: all 0.5s ease-out;
+}
+
+img {
+    width: 20px;
+}
+
+#maincontainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.select-css {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    cursor: pointer;
+    padding: .6em 1.4em .5em .8em;
+    width: 18%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 20px;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+        linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+    font-family: Nunito, sans-serif;
+
+}
+
+.select-css::-ms-expand {
+    display: none;
+}
+
+.select-css:hover {
+    border-color: #888;
+    opacity: 0.9;
+}
+
+.select-css:focus {
+    border-color: #aaa;
+    /*box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);*/
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+
+.select-css option {
+    font-weight: normal;
+}
+
+
+
+.container div {
+    /* border: 1px solid #b1d9d9; */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7%;
+    overflow: hidden;
+    /* justify-content: center; */
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#turn {
+    color: white;
+    margin: 0 auto;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2em;
+}
+#BotonReiniciar{
+    width:25%;
+}
+
+#selectSize{
+    width:25%;
+}
+#BotonReiniciar:hover {
+    opacity: 0.9;
+}
+
+#ad {
+    text-align: center;
+    color: azure;
+    font-family: nunito;
+    padding: 10px;
+}
+
+#alinear {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+/* FLIP */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-box.clicked .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+    background-color: #FBAECD;
+
+}
+
+/* Style the back side */
+.flip-box-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#flex-box {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jugador {
+    margin: 0 auto;
+    color: white;
+    font-size: 2em;
+    background-image:  linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: .5em;
+    color:white;
+    padding:.5em;
+}
+
+#jugador1 {
+    
+    text-align: center;
+    background-image:  linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+
+}
+
+#jugador2 {
+  
+    text-align: center;
+
+}
+
+#points_jug1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#points_jug2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#winDiv {
+    z-index: 10;
+    top: 9%;
+    width: 40%;
+    height: 557px;
+    background-color: rgba(44, 34, 48, 0.91);
+    border-radius: 4em;
+    color: white;
+    position: absolute;
+    left: 30%;
+    -webkit-animation: fadein 1s;
+    transition: 0.3s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#winDiv h1 {
+    font-size: 3em;
+    position: absolute;
+    top: 26%;
+    font-family: monospace;
+}
+
+#winDiv p {
+    padding: 19%;
+    text-align: center;
+}
+
+#winDiv span {
+    background-color:#ED91B6;
+    color:
+        #f7f7f7;
+    border-radius: 1em;
+    padding: 2em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 17%;
+    transition: 0.3s;
+    box-shadow: -1px 2px 22px -2px rgba(0, 0, 0, 0.75);
+    font-family: monospace;
+}
+
+#winDiv span:hover {
+    background-color:#ED91B6;
+    color: #8f8c8c;
+    transform: scale(0.9);
+    font-family: Nunito, sans-serif;
+
+}
+
+#landscape{
+    display: none;
+}
+
+/* CLASSES */
+.dissapear {
+
+    display: none;
+}
+
+.appear {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#turn {
+    color: white;
+    margin: 0 auto;
+    font-family: Nunito, sans-serif;
+    text-align: center;
+    margin-top: 2.5%;
+    font-size: 2em;
+}
+
+address {
+    text-align: center;
+    color: white;
+    margin-top: 1.3%;
+    font-family: Nunito, sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        width: 80vw;
+        height: 60vh;
+    }
+
+
+    #turn{
+        font-size: 1em;
+    }
+
+    #alinear {
+        width: 80vw;
+       
+    }
+
+    .select-css {
+        margin: 20px 0px;
+        width: 40%;
+    }
+
+    #landscape{
+        display: block;
+         color: white;
+        font-family: monospace;
+        font-size: 2em;
+        margin-top: 3em;
+    }
+
+    img{
+        width: auto;
+    }
+
+    #maincontainer { 
+        display: none;
+    }
+
+    header{
+        font-size: 1.5em;
+    }
+
+    #icono{
+        font-size: 1em;
+    }
+
+    header h1{
+        white-space: nowrap;
+        font-size:1em;
+        width: auto;
+        padding-right: 0.5em;
+    }
+
+    .botonMenu{
+        font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 2em;
+    font-family: monospace;
+    margin-left: 0.3em;
+    margin-right:0.5em;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    #landscape{
+        display:none;
+
+    }
+
+    #maincontainer{
+        display:block;
+    }
+
+    header{
+        font-size: 1em;
+    }
+
+   .botonMenu{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1em;
+    margin-right: 1em;
+   }
+
+   #icono{
+    font-size: 1em;
+   }
+
+   header h1{
+    text-align: left;
+    padding: 1em;
+    font-size: 1em;
+    width: 80%;
+    margin: 0;
+    font-weight: 400;
+}
+
+.container{
+    width: 60vw;
+    height: 60vh;
+
+}
+
+.jugador{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    font-size: 1em;
+}
+
+
+#points_jug1{
+    margin:0;
+}
+
+
+#points_jug2{
+    margin:0;
+}
+
+#winDiv{
+    z-index: 10;
+    top: 9%;
+    width: 40%;
+    height: 85%;
+    border-radius: 8.5%;
+    color: white;
+    position: absolute;
+    left: 30%;
+    transition: 0.3s;
+}
+
+#WinDiv span{
+    color: #f7f7f7;
+    border-radius: 1em;
+    padding: 1em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 17%;
+    transition: 0.3s;
+    font-family: monospace;
+}
+}

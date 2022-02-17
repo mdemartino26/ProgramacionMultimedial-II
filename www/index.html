@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+      Customize this policy to fit your own app's needs. For more guidance, see:
+          https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+      Some notes:
+          * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+          * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+          * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+              * Enable inline JS: add 'unsafe-inline' to default-src
+      -->
+    <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Umai-</title>
+</head>
+
+<body onload="checkUsuarios()">
+
+    <header>
+        <img id="icono"  src="assets/img/icons/heart.png" alt="icono del sitio">
+        <h1>Comfi Games</h1>
+        <button id="audio" onclick="audio()"> Música </button>
+        <button id="cerrarSesion"  class="cerrarSesion" onclick="cerrarSesion()">Cerrar</button>
+       
+    </header>
+    <main>
+
+
+        <section id="ingreso">
+            <h1 class="glow">Ingresar usuarios</h1>
+            <form submit="javascript:corroborar()">
+                <div id="ingreso1">
+                <h3> Usuario 1 </h3>
+                
+                <img id="myImage1" src="../assets/img/avatars/1.jfif" alt="usuario1">
+                <button id="btnImagen1" disabled> Sacar foto </button>
+                <label> Nombre: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nombre"
+                    id="nombretxt">
+                <label> Nickname: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nickname"
+                    id="nicktxt">
+               
+            </div>
+            <div id="ingreso2">
+                <h3> Usuario 2 </h3>
+
+                <img id="myImage2" src="../assets/img/avatars/2.jfif" alt="usuario2">
+                <button id="btnImagen2" disabled> Sacar foto</button>
+                <label> Nombre: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nombre"
+                    id="nombretxt2">
+                <label> Nickname: </label> <input type="text" minlength="4" maxlength="50" placeholder="Nickname"
+                    id="nicktxt2">
+                
+
+            </div>
+                <button type="button" id="cargarDatos" value="ingresar" onclick="corroborar()">Guardar</button>
+            </form>
+        </section>
+
+       
+
+
+
+
+
+        <div id="juegos" class="typewriter">
+            <h2> Selecciona un juego </h2>
+            <section id="gameButtons">
+                <li class="pink" ><a href="ta-te-quieto/index.html">TaTeTi</a></li>
+
+                <li class="pinker"><a href="memotest/memotest.html">Memotest</a></li>
+
+                <li class="pink"><a href="Simon/index.html">Simon</a></li>
+
+            </section>
+
+
+        </div>
+
+        <section id="usuarios" class="typewriter">
+            <h2 id="titulo">usuarios</h2>
+            <article id="usu1"><label type="text" id="nicktxt"></label> <img class="imgUsu" src=""></article>
+            <article id="usu2"> <label type="text" id="nicktxt2"></label><img class="imgUsu" src=""> </article>
+        </section>
+
+        
+        <div id="edit">
+            <button id="editarProfile" class="botonesExtra" onclick="editarPerfiles()">Editar perfiles</button>
+        </div>
+
+        
+      
+
+
+    </main>
+
+    <footer>
+       <p> © all rights reserved para marianela de martino</p>
+    </footer>
+
+    <audio id="sonidoFondo">
+       <source src="assets/audio/background.mp3"> 
+    </audio>
+
+    <audio id="sonidoClick" style="display: none;">
+        <source src="assets/audio/buttonClick.mp3"> 
+     </audio>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+
+</body>
+
+</html>

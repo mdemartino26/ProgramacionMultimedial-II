@@ -1,0 +1,622 @@
+@charset "utf-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/*///RESET */
+/*CSS*/
+
+* {
+    font-family: monospace;
+    
+}
+
+body{
+    background: #4C3d53;
+   /* background-image: url("../img/bg.jpg")*/
+}
+
+header{
+    overflow: hidden;
+    background: #2C2230;
+    color: #FBAECD;
+    font-family: 'Rowdies', cursive;
+    font-weight: 400;
+    display: flex;
+}
+
+.titulo{
+    display: none;
+}
+
+#icono{
+    width: 1em;
+    height: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+.glow {
+    
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-family: 'Rowdies', cursive;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 0.2em #fff, 0 0 0.3px #fff, 0 0 0.4em #e60073, 0 0 0.5em #e60073, 0 0 0.6px #e60073, 0 0 0.7em #e60073, 0 0 0.8em #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 0.2em #fff, 0 0 0.3em #ff4da6, 0 0 0.4em #ff4da6, 0 0 0.5em #ff4da6, 0 0 0.6em #ff4da6, 0 0 0.7em #ff4da6, 0 0 0.8em #ff4da6;
+    }
+}
+ 
+h1 {
+    text-align: left;
+    padding: 1em;
+    font-size: 2em;
+    width: 80%;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    padding: 2em;
+    color: white;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 70vh;
+    
+}
+
+#audio{
+    margin-left:auto;
+  line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 4em;
+    padding: 1em;
+    margin-top: 1.5em;
+}
+
+#sonidoFondo{
+    display: none;
+}
+
+#ingreso {
+    text-align: center;
+    color:white;
+}
+
+#ingreso h1{
+    padding: 1em;
+    font-size: 2em;
+    margin: 0 auto;
+}
+
+#ingreso h3{
+    font-size: 1.5em;
+    padding-top: 1em;
+    font-family: 'Rowdies', currsive;
+    
+}
+
+form{
+    display: flex;
+}
+
+#ingreso1{
+    display: grid;
+    width:45%;
+}
+
+#myImage1{
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding: 1em;
+}
+
+#ingreso2{
+    display: grid;
+    width:45%;
+}
+
+#myImage2{
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding:1em;
+}
+
+label{
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+input{
+    width: 64%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2C2230;
+    border-color:#4C3d53;
+    border-radius: 0.3em;
+    color: white;
+}
+
+#ingreso button {
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+}
+
+
+
+#btnImagen1{
+    margin: 0 auto;
+}
+
+
+#btnImagen2{
+    margin: 0 auto;
+}
+
+#cargarDatos{
+    margin-top: 3em;
+}
+
+#usuarios {
+    padding: 1em;
+  overflow: hidden;
+    display: flex;
+  width: 40%;
+  margin: 0 auto;
+  color:white;
+}
+
+
+
+#usu1{
+    width: 40%;
+    background-color: #ED91B6;
+    padding: 1em;
+    border-radius: 10px;
+    margin-right: 1em;
+    line-height: 2em;
+}
+
+#usu2 {
+    float: right;
+    width: 40%;
+    background-color: #FBAECD;
+    padding: 1em;
+    border-radius: 10px;
+    line-height: 2em;
+}
+
+.botonesExtra{
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1em;
+    display: flex;
+}
+
+.cerrarSesion{
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    margin-right: 2em;
+    height: 4em;
+    padding: 1em;
+}
+
+#juegos {
+    text-align: center;
+    margin-top: 4em;
+    height: 48vh;
+}
+
+#gameButtons{
+    display: flex;
+}
+
+#juegos li {
+    list-style: none;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    width: 33%;
+    font-size: 1.5em;
+    font-family: 'Rowdies';
+}
+
+.pink {
+    border:#ED91B6 .2em solid; 
+    background-color: #ED91B6;
+}
+
+.pinker{
+    background-color: #FBAECD;
+    border:#FBAECD .2em solid; 
+}
+
+
+#juegos h2{
+    width:30%;
+}
+
+.typewriter h2 {
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #e60073; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 30% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:#e60073 }
+  }
+
+
+a {
+    color: white;
+    text-decoration: none;
+   
+}
+
+.desaparecer{
+    display:none;
+}
+
+#usu1 img { 
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+#usu2 img { 
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+button:active{
+    background-color: #ED91B6;
+  box-shadow: 0 1em #4C3d53;
+  transform: translateY(.5em);
+}
+
+footer { 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    background-color: #2C2230;
+    margin-top: 4em;
+}
+
+.cordova-camera-capture
+{    
+    background-color: rgba(76,61,83,0.6);
+    padding: 4em;
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cordova-camera-capture button{
+    width:100%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+
+    #titulo{
+        display: block;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+    #usuarios{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #usu1{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #usu2{
+        width: 60%;
+        margin: 0 auto;
+        float: none;
+        margin-top: 1em;
+    }
+
+    #gameButtons{
+        display: block;
+    }
+
+    #juegos li{
+        width:auto;
+    }
+
+    form{
+        display:block;
+    }
+
+    #ingreso1{
+        width:auto;
+    }
+
+    #ingreso2{
+        width: auto;
+    }
+
+    header{
+        font-size: 1.5em;
+    }
+
+    #ingreso h1 { 
+        font-size: 2em;
+        white-space: nowrap; 
+        margin: 0 auto;
+    }
+
+    #icono {
+        font-size: 1em;
+    }
+
+    h1{
+        font-size: 1em;
+        white-space: nowrap;
+        
+
+    }
+
+    #audio {
+        font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1.5em;
+    }
+
+    .cerrarSesion{
+    line-height: 2em;
+    width: fit-content;
+    display: flex;
+    margin-left: 1em;
+    margin-right: 2em;
+    font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1.5em;
+    }
+
+
+    #juegos h2{
+        width: 75%;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 75% }
+      }
+      
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color:#e60073 }
+      }
+    
+    
+}
+
+
+@media screen and (orientation: landscape) {
+    #juegos {
+        text-align: center;
+        margin-top: 1em;
+        height: 48vh;
+    }
+
+    #titulo{
+        display: none;
+    }
+    
+    #gameButtons{
+        display: flex;
+    }
+    
+    #juegos li {
+        list-style: none;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 1em;
+        width: 33%;
+        font-size: 1.5em;
+        font-family: 'Rowdies';
+    }
+
+    
+form{
+    display: flex;
+}
+
+#ingreso1{
+    display: grid;
+    width:45%;
+}
+#ingreso2{
+    display: grid;
+    width:45%;
+}
+
+#cargarDatos{
+    margin-top: 10em;
+    height: 4em;
+}
+}
+
+@media only screen and (max-width: 732px) and (orientation: landscape) {
+    #usuarios{
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 7em;
+        display: flex;
+    }
+
+    #titulo{
+        display: none;
+    }
+
+
+}
