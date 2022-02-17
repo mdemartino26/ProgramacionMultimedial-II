@@ -292,11 +292,10 @@ input{
     margin-top: 3em;
 }
 
-#nick{
+#usu1 .nick, #usu2 .nick{
     text-align: center;
     font-size: 1.5em;
 }
-
 
 
 #usu1{

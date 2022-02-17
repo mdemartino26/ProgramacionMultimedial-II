@@ -181,7 +181,7 @@ class Simon {
                 
             });
             this.updateRonda('Finalizada');
-            puntajeS1 = puntajeS1 + 1; 
+            puntajeS1 = puntajeS1 + (100*j1); 
             jugador1.puntajeS = puntajeS1;
             localStorage.setItem("usuario1", JSON.stringify(jugador1));
             this.reiniciar();
@@ -194,7 +194,7 @@ class Simon {
                 element.classList.add('gano');
             });
             this.updateRonda('Finalizada');
-            puntajeS2 = puntajeS2 + 1; 
+            puntajeS2 = puntajeS2 + (100*j2); 
             jugador2.puntajeS = puntajeS2;
             localStorage.setItem("usuario2", JSON.stringify(jugador2));
             this.reiniciar();

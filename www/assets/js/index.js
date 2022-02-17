@@ -27,6 +27,10 @@ var img2 = "";
 
 var audioPagina = 1;
 
+var usuario1;
+
+var usuario2;
+
 
 function takePicture(num) {
     document.getElementById("sonidoClick").play();
@@ -76,31 +80,46 @@ function corroborar() {
 };
 
 function guardar() {
-    var usuario1 = {
-        nombre: document.getElementById("nombretxt").value,
-        nick: document.getElementById("nicktxt").value,
-        img1: document.getElementById("myImage1").src,
-        puntajeTTT: 0,
-        puntajeMMT: 0,
-        puntajeS: 0
-    };
+    if (!usuario1){
+        usuario1 = {};
+        usuario1.puntajeTTT = 0;
+        usuario1.puntajeMMT = 0;
+        usuario1.puntajeS = 0;
+    } 
 
-    var usuario2 = {
-        nombre: document.getElementById("nombretxt2").value,
-        nick: document.getElementById("nicktxt2").value,
-        img2: document.getElementById("myImage2").src,
-        puntajeTTT: 0,
-        puntajeMMT: 0,
-        puntajeS: 0
-    };
+    usuario1.nombre = document.getElementById("nombretxt").value.trim();
+    usuario1.nick = document.getElementById("nicktxt").value.trim();
+    console.log(document.getElementById("myImage1").src);
+    usuario1.img = document.getElementById("myImage1").src;
+   
 
+    if (!usuario2){
+        usuario2 = {};
+        usuario2.puntajeTTT = 0;
+        usuario2.puntajeMMT = 0;
+        usuario2.puntajeS = 0;
+    } 
+
+    usuario2.nombre = document.getElementById("nombretxt2").value.trim();
+    usuario2.nick = document.getElementById("nicktxt2").value.trim();
+    usuario2.img = document.getElementById("myImage2").src;
+    
     localStorage.setItem("usuario1", JSON.stringify(usuario1));
     localStorage.setItem("usuario2", JSON.stringify(usuario2));
     document.getElementById("ingreso").style.display = "none";
     document.getElementById("edit").style.display = "none";
     document.getElementById("cerrarSesion").style.display = "";
-    document.getElementById("usu1").innerHTML = "<div id='nick'> Usuario 1: " + usuario1.nick + " </div> <img src='" + usuario1.img1 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario1.puntajeTTT + "</div> <div>Memotest: " + usuario1.puntajeMMT + "</div> <div>Simon: " +usuario1.puntajeS + "</div></div>";
-    document.getElementById("usu2").innerHTML = "<div id='nick'> Usuario 2: " + usuario2.nick + " </div> <img src='" + usuario2.img2 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario2.puntajeTTT + "</div> <div>Memotest: " + usuario2.puntajeMMT + "</div> <div>Simon: " +usuario2.puntajeS + "</div></div>";
+    document.querySelector("#usu1 .nick").innerHTML = usuario1.nick;
+    document.querySelector("#usu1 img").src = usuario1.img;
+    document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(1) span").innerHTML = usuario1.puntajeTTT;
+    document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(2) span").innerHTML = usuario1.puntajeMMT;
+    document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(3) span").innerHTML = usuario1.puntajeS;
+
+    document.querySelector("#usu2 .nick").innerHTML = usuario2.nick;
+    document.querySelector("#usu2 img").src = usuario2.img;
+    document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(1) span").innerHTML = usuario2.puntajeTTT;
+    document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(2) span").innerHTML = usuario2.puntajeMMT;
+    document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(3) span").innerHTML = usuario2.puntajeS;
     document.getElementById("juegos").style.display = "";
     document.getElementById("irUsuarios").className = "seccionesEstilos";
     document.getElementById("irJuegos").className = "seccionesEstilosSelect";
@@ -113,16 +132,24 @@ function checkUsuarios() {
     document.getElementById("secciones").style.display = "none";
     document.getElementById("juegos").style.display = "none";
     document.getElementById("usuarios").style.display = "none";
-    var usuario1 = localStorage.getItem("usuario1")
-    var usuario2 = localStorage.getItem("usuario2")
+    usuario1 = localStorage.getItem("usuario1");
+    usuario2 = localStorage.getItem("usuario2");
     if (usuario1 && usuario2) {
         usuario1 = JSON.parse(usuario1);
         usuario2 = JSON.parse(usuario2);
         document.getElementById("ingreso").style.display = "none";
         document.getElementById("usuarios").style.display = "none";
         document.getElementById("secciones").style.display = "";
-        document.getElementById("usu1").innerHTML = "<div id='nick'> Usuario 1: " + usuario1.nick + " </div> <img src='" + usuario1.img1 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario1.puntajeTTT + "</div> <div>Memotest: " + usuario1.puntajeMMT + "</div> <div>Simon: " +usuario1.puntajeS + "</div></div>";
-        document.getElementById("usu2").innerHTML = "<div id='nick'> Usuario 2: " + usuario2.nick + " </div> <img src='" + usuario2.img2 + "'> <div class='puntajesUsuarios'><h3>Puntajes </h3><div>TaTeTi: " + usuario2.puntajeTTT + "</div> <div>Memotest: " + usuario2.puntajeMMT + "</div> <div>Simon: " +usuario2.puntajeS + "</div></div>";
+        document.querySelector("#usu1 .nick").innerHTML = usuario1.nick;
+        document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(1) span").innerHTML = usuario1.puntajeTTT;
+        document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(2) span").innerHTML = usuario1.puntajeMMT;
+        document.querySelector("#usu1 .puntajesUsuarios div:nth-of-type(3) span").innerHTML = usuario1.puntajeS;
+
+        document.querySelector("#usu2 .nick").innerHTML = usuario2.nick;
+        document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(1) span").innerHTML = usuario2.puntajeTTT;
+        document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(2) span").innerHTML = usuario2.puntajeMMT;
+        document.querySelector("#usu2 .puntajesUsuarios div:nth-of-type(3) span").innerHTML = usuario2.puntajeS;
+       
         document.getElementById("juegos").style.display = "";
         document.getElementById("irUsuarios").className = "seccionesEstilos";
         document.getElementById("irJuegos").className = "seccionesEstilosSelect";
@@ -130,6 +157,7 @@ function checkUsuarios() {
     } else {
         document.getElementById("edit").style.display = "none";
         document.getElementById("cerrarSesion").style.display = "none";
+        document.getElementById("ingreso").style.display = "block";
     }
 }
 
@@ -160,11 +188,17 @@ function editarPerfiles() {
     obj1 = JSON.parse(obj1); //Convertir en obj
     document.getElementById("nombretxt").value = obj1.nombre;
     document.getElementById("nicktxt").value = obj1.nick;
+    document.getElementById("myImage1").value = obj1.img;
 
     var obj2 = localStorage.getItem("usuario2");
     obj2 = JSON.parse(obj2);
     document.getElementById("nombretxt2").value = obj2.nombre;
     document.getElementById("nicktxt2").value = obj2.nick;
+    document.getElementById("myImage2").value = obj2.img;
+
+    document.getElementById("ingreso1").style.display = "block";
+    document.getElementById("ingreso2").style.display = "none";
+
     document.getElementById("juegos").style.display = "none";
     document.getElementById("edit").style.display = "none";
     document.getElementById("usuarios").style.display = "none";

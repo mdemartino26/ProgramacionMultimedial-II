@@ -112,7 +112,7 @@ function clickTile(divId) {
             console.log("Pares encontrados: " + pairsFound + ". Pares totales: " + totalPairs);
             playerTurn.pairs++;
             console.log("Pares " + nick1 + ":", player1.pairs, "Pares " + nick2 + ":", player2.pairs);
-            playerTurn.points += turnsInARow * 100;
+            playerTurn.points += turnsInARow * 10;
             console.log("Puntos J1: ", player1.points, "Puntos J2: ", player2.points);
             $("#points_jug1").text(JSON.stringify(player1.points));
             $("#points_jug2").text(JSON.stringify(player2.points));
@@ -130,7 +130,7 @@ function clickTile(divId) {
                 if (player1.pairs > player2.pairs) {
                     winDiv.innerHTML = '<h2>¡Ganó ' + nick1 + '! </h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                     winDiv.className = "appear";
-                    puntajeMMT1 = puntajeMMT1 + 1;
+                    puntajeMMT1 = puntajeMMT1 + player1.points;
                     jugador1.puntajeMMT = puntajeMMT1;
                     localStorage.setItem("usuario1", JSON.stringify(jugador1))
                 } else {
@@ -140,7 +140,7 @@ function clickTile(divId) {
                     } else if (player2.pairs > player1.pairs) {
                         winDiv.innerHTML = '<h2>¡Ganó ' + nick2 + '!</h2><button class="botonMenu" onclick="restart()">Empezar nueva partida</button>';
                         winDiv.className = "appear";
-                        puntajeMMT2 = puntajeMMT2 + 1;
+                        puntajeMMT2 = puntajeMMT2 + player2.points;
                         jugador2.puntajeMMT = puntajeMMT2;
                         localStorage.setItem("usuario2", JSON.stringify(jugador2))
                     }
