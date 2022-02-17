@@ -1,0 +1,447 @@
+body{
+    background-color: #4C3d53;
+    margin:0;
+}
+
+header{
+    overflow: hidden;
+    background: #2C2230;
+    color: #FBAECD;
+    font-family: 'Rowdies', cursive;
+    font-weight: 400;
+    display: flex;
+}
+
+
+#icono{
+    width: 1em;
+    height: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+h1 {
+    text-align: left;
+    padding: 1em;
+    font-size: 2em;
+    width: 78%;
+    margin:0;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    
+    
+}
+
+button{
+    font-family: monospace;
+}
+
+#audio{
+    line-height: 2em;
+      font-weight: bold;
+      text-align: center;
+      background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+      border-radius: 0.3em;
+      border: none;
+      color: white;
+      text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+      height: 4em;
+     margin-left:1em;
+      padding: 1em;
+      margin-top: 1.5em;
+  }
+
+  #atras{
+    line-height: 2em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    height: 4em;
+   margin-left:1em;
+    padding: 1em;
+    margin-top: 1.5em;
+    margin-right: 1em;
+  }
+
+
+table{
+    border-collapse: collapse;
+    border-color: #ED91B6;
+    color: #e77aa6;
+    padding: 2em;
+}
+
+td,tr{
+    width: 2em;
+    height: 2em;
+}
+
+td{
+    text-align: center;
+    font-size: 4em;
+    font-family: monospace;
+}
+
+main h1{
+    text-align: center;
+    color: white ;
+   
+}
+
+#datos{
+    color: white;
+    text-align: center;
+    height: 1em;
+    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-family: monospace;
+    white-space: nowrap;
+   
+}
+
+#cartel {
+    position: absolute;
+    background-color: rgba(44, 34, 48, .6);
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rowdies';
+}
+
+.botonCartel{
+    font-family: monospace;
+    width: 45%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+    margin-left: 0.5em;
+}
+
+#ganador {
+    text-align: center; 
+    margin: 4em;
+}
+
+#reinicio {
+    font-family: monospace;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+.botonAtras{
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: 0px 1px 0px rgb(255 255 255 / 30%), 0px -1px 0px rgb(0 0 0 / 70%);
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1em;
+    margin-left: 1em;
+    
+}
+
+button:active{
+    background-color: #ED91B6;
+  box-shadow: 0 1em #4C3d53;
+  transform: translateY(.5em);
+}
+
+.class{
+    font-family: 'Rowdies';
+}
+
+.aparecer{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    position: absolute;
+    height: 11em;
+    z-index: 1000;
+    background-color: rgba(44, 34, 48, .9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rowdies';
+    border-radius: 1%;
+}
+
+.aparecer h3{
+    font-size: 2em; 
+    text-align: center;
+}
+
+#cartelReglas{
+    position: absolute;
+    background-color: rgba(44, 34, 48, .9);
+    width: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cartelReglas button{
+    font-family: monospace;
+    float: right;
+    margin: 1em;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+#cartelReglas p {
+    font-family: monospace;
+    color: white;
+    padding: 5vh;
+}
+
+#reglas{
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    width: 3vw;
+    line-height: 2em;
+    font-size: 1em;
+    background-image: linear-gradient(#fac3d9, #e77aa6);
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 768px) and (orientation : portrait) {
+    header{
+        font-size: 1.5em;
+    }
+
+    h1{
+        font-size: 1em;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    #audio {
+    font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    margin-right: .5em;
+    width: fit-content;
+    margin-left: 1em;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 2em;
+    }
+
+    #atras{
+        font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    margin-right: .5em;
+    width: fit-content;
+    display: flex;
+    margin-left: 1em;
+    margin-right: 2em;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 2em;
+    }
+
+    #icono {
+        font-size: 1em;
+    }
+
+       
+
+        td,tr{
+            width: 2em;
+            height: 2em;
+        }
+
+        td{
+            font-size: 4em;
+        }
+
+        #datos{
+            color: white;
+            text-align: center;
+            height: 2em;
+            margin: 1em;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            font-size: 1.5em;   
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        #cartel{
+            position: absolute;
+            background-color: rgba(44, 34, 48, .6);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Rowdies';
+            border-radius: 3%;
+        }
+
+        #ganador{
+            text-align: center;
+            margin: 1em;
+            padding: 4em;
+            white-space: nowrap;
+        }
+
+        .aparecer{
+            text-align: center;
+            font-size: 1em;
+            padding: 2em;
+            height: auto;
+        }
+
+        .aparecer h3{
+            font-size: 1em;
+        }
+
+    #reglas{
+        width: 7vw;
+        height: 5vh;
+        font-size: 1em;
+    }
+
+    #cartelReglas button{
+        width: 15vw;
+        height: 15vh;
+        font-size: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    #header{
+        font-size: 1em;
+    }
+
+    td, tr{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #datos{
+        margin: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+   
+
+    #audio{
+        font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+    text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+    margin-right: 0.4em;
+    height: 2em;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1em;
+    }
+    
+       #icono{
+        font-size: 1em;
+       }
+    
+       header h1{
+        text-align: left;
+        padding: 1em;
+        font-size: 1em;
+        width: 80%;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    #atras{
+        font-weight: bold;
+        font-size: 1em;
+        text-align: center;
+        background-image: linear-gradient(rgb(250, 195, 217), rgb(231, 122, 166));
+        border-radius: 0.3em;
+        border: none;
+        color: white;
+        text-shadow: rgb(255 255 255 / 30%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px -1px 0px;
+        margin-right: 1em;
+        height: 2em;
+        padding: 0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-top: 1em;
+    }
+
+    .aparecer{
+        text-align: center;
+        font-size: 1em;
+        padding: 2em;
+        height: auto;
+    }
+
+    .aparecer h3{
+        font-size: 1em;
+    }
+
+}
